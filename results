@@ -1,0 +1,39 @@
+Skróty:
+G	nr pokolenia ktore osiagnelo wynik 100 (maksymalny)
+MR	mutation rate
+IL	dlugosc wejscia
+TL  ilosc testow w zestawie
+DC	double crossover
+SC	single crossover
+>   do tylu prob dotarłem, brak dobrego rozwiazania
+
+Output = input
+
+1.	P 300	G 1009	MR 0.01	DC	TL = 5	IL = 5
+2.	P 300	G 7000	MR 0.01	DC	TL = 5	IL = 5
+3.	P 300	G 1207	MR 0.01	DC	TL = 5	IL = 5
+4.	P 300	G 4172	MR 0.01	DC	TL = 5	IL = (rand() % 20)+1
+5.	P 300	G >9000	MR 0.001	TL = 5	DC	IL = (rand() % 20)+1	duże skoki max, avg fit - nawet miedzy 6 a 40, nie dotarłem do końca
+6.	P 300	G 1000	MR 0.01	DC	TL = 5	IL = (rand() % 20)+1	avg fit w okolicach 10 :O
+7.	P 300	G 213	MR 0.01	DC	TL = 5	IL = (rand() % 20)+1	
+8.	P 300	G 324	MR 0.01	DC	TL = 5	IL = (rand() % 20)+1	
+9.	P 300	G 2726	MR 0.01	DC	TL = 5	IL = (rand() % 20)+1
+10.	P 300	G 20640	MR 0.01	DC	TL = 5	IL = (rand() % 20)+1
+11.	P 150	G >693	MR 0.01	DC	TL = 40	IL = (rand() % 20)+1
+12. P 1000	G 76	MR 0.01 DC	TL = 2	IL = (rand() % 30)+10, najwiecej daje populacja? malo testow ale skomplikowane 
+13. P 1000	G 82	MR 0.01 DC	TL = 2	IL = (rand() % 30)+10, zmienna ilosc testow?
+14. P 1000	G >1270	MR 0.01 DC	TL = 5	IL = (rand() % 30)+10, zmienna ilosc testow?  
+15. P 1000	G 434	MR 0.01 DC	TL = 5	IL = (rand() % 10)+1, LD zamiast mojej odleglosci
+
+funkcja "dyskretna" dajaca punkty tylko za poprawne znaki w odpowiednich miejscach ma niezle efekty
+tak jakby szybciej dochodzi do bliskosci 100, ale potem problemy
+
+output reverse krazyl przez 5k generacji dookola 20%
+
+Simple math: x + y = output (2 or 3 digits on output)
+
+1.	P 300	G >15341	MR 0.01	DC	TL = 5	IL = 9	wyglada na to ze zla funkcja fitness, zamiast na znakach powinna na liczbach dzialac
+2.	P 300	G >15341	MR 0.001	DC	TL = 5	IL = 9 to samo co wyzej, porownywalne max fit
+3.	P 300	G >32153	MR 0.01	DC	TL = 5	IL = 9 to samo co wyzej, porownywalne max fit
+4. 	P 300 	G > 8000	MR 0.01 DC	TL = 20	IL = 9, inna funkcja fitness, jesli cokolwiek poza cyfra to 0 punktow, nie wyglada na zbiezne
+4. 	P 150 	G > 2890	MR 0.01 DC	TL = 40	IL = 9, ta funkcja co wyzej
